@@ -77,8 +77,8 @@ def read_pdf_preview(file_path: str) -> str:
             text = ""
             for page in doc:
                 text += page.get_text()
-                if len(text) > 500: break
-            return text[:500]
+                if len(text) > 20000: break
+            return text[:20000]
     except Exception as e:
         return f"Error reading PDF: {e}"
 
